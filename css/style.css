@@ -1,7 +1,21 @@
 :root{
     --primario: #5C9632;
+    --secundario: #797C76;
+    --s1_secundario: #363636;
+    --neutro: #FFFFF2;
 }
 
-p {
-    color: var(--primario);
+header {
+    display: flex;
+    flex-direction: row;
+    width:390px;
+    height: 45px;
+    background-color: var(--s1_secundario);
+    align-items: center;
+    justify-content: space-between;
 }
+
+img{
+padding: 6px;
+}
+
