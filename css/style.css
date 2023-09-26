@@ -1,0 +1,7 @@
+:root{
+    --primario: #5C9632;
+}
+
+p {
+    color: var(--primario);
+}
