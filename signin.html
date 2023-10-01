@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Registrate</title>
+</head>
+<body>
+    <div class="formulario formSignin">
+        <img class="imgForm" src="images/imgRegistro.jpg" alt="imgRegistro">
+        <button class="cancel-button" type="button">
+            <svg fill="none" height="20" viewBox="0 0 48 48" width="20" xmlns="http://www.w3.org/2000/svg">
+            <g clip-rule="evenodd" fill="#797C76" fill-rule="evenodd" stroke="#797C76">
+            <path d="m24 42c9.9411 0 18-8.0589 18-18s-8.0589-18-18-18-18 8.0589-18 18 8.0589 18 18 18zm0 2c11.0457 0 20-8.9543 20-20s-8.9543-20-20-20-20 8.9543-20 20 8.9543 20 20 20z"/><path d="m16.2218 31.7782c-.3906-.3905-.3906-1.0237 0-1.4142l14.1421-14.1422c.3905-.3905 1.0237-.3905 1.4142 0s.3905 1.0237 0 1.4142l-14.1421 14.1422c-.3906.3905-1.0237.3905-1.4142 0z"/><path d="m16.2218 16.2218c.3906-.3905 1.0237-.3905 1.4143 0l14.1421 14.1422c.3905.3905.3905 1.0237 0 1.4142s-1.0237.3905-1.4142 0l-14.1422-14.1422c-.3905-.3905-.3905-1.0237 0-1.4142z"/></g></svg>
+        </button>
+        <form class="textoForm textoFormSignin">
+            <div class="tituloForm">
+                <h2>Crea tu cuenta</h2>
+                <h2>¡ES GRATIS!</h2>
+            </div>
+            <div class="campoCompletar">
+                <label for= "nombreyapellido">Nombre y Apellido *</label>
+                <input type="text" name="nombreyapellido" required>        
+            </div>
+            <div class="campoCompletar">
+                <label for= "nickName">NickName</label>
+                <input type="text" name="nickName">        
+            </div>
+            <div class="campoCompletar">
+                <label for= "edad">Edad *</label>
+                <input type="text" name="edad" required>        
+            </div>
+            <div class="campoCompletar">
+                <label for= "email">Email</label>
+                <input type="text" name="email" required>        
+            </div>
+            <div class="campoCompletar">
+                <label for= "contraseña">Contraseña</label>
+                <input type="password" name="contraseña" required>    
+            </div>
+            <div class="campoCompletar">
+                <label for= "repetirContraseña">Repetir contraseña *</label>
+                <input type="text" name="repetirContraseña" required>        
+            </div>
+            
+            
+            <!--empieza captcha-->
+            <div class="captcha captchaSignin">
+                <div>
+                    <input type="checkbox">
+                    <p>No soy un robot</p>
+                </div>
+                <img src="images/recaptcha.png" alt="recaptcha" width="35" height="25">
+            </div>
+            <!--termina captcha-->
+            <div class="lineO">
+                <p>-----------</p>
+                <p>O</p>
+                <p>-----------</p>
+            </div>
+            <button class="sesionCon">
+                <img src="images/google.256x256.png" alt="google" width="15" height="15">
+                REGISTRARSE CON GOOGLE
+            </button>
+            <button class="sesionCon">
+                <img src="images/facebook.png" alt="facebook" width="10" height="15">
+                <p>REGISTRARSE CON FACEBOOK</p>
+            </button>  
+            <button class="acceder" type="submit" value="acceder">Acceder</button>  
+            <div class="linkRegistro">
+                <p>¿Ya tenes cuenta?</p>
+                <a href="login.html">Ingresa ahora</a>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>

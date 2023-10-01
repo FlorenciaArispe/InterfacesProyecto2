@@ -1,3 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
 :root{
     --primario: #5C9632;
     --secundario: #797C76;
@@ -19,3 +27,101 @@ img{
 padding: 6px;
 }
 
+.formulario{
+    background-color: #363636;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    width: 39%;
+    height: 500px;
+}
+.imgForm{
+    padding: 0px;
+    width: 50%;    
+}
+.tituloForm{
+    
+}
+.textoForm{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    width: 50%;
+    height: 85%;
+    margin: 20px;
+    padding-bottom: 10px;
+    padding-top: 30px;
+}
+.campoCompletar{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: space-between;
+}
+.cancel-button{
+    position: absolute;
+    top: 5px;
+    right: 61.5%;
+    background: transparent;
+
+}
+.captcha {
+    background-color: #f0f0f0;
+    padding: 1px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 200px;
+}
+.captchaSignin{
+    width: 150px;
+}
+.captcha > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+}
+.captcha > div p{
+    margin-left: 10px;
+}
+.lineO{
+    display: flex;
+    flex-direction: row;
+    /*separa espacio*/
+}
+.sesionCon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 78%;
+    border-radius: 15px;
+    font-size: 10px;
+}
+.acceder{
+    padding: 9px;
+    width: 110%;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+.linkRegistro{
+    display: flex;
+    flex-direction: row;
+    margin-top: 4px;
+    /*espacion entre ? y R*/
+}
+.textoFormSignin{
+    height: 90%;
+    
+}
+.formSignin{
+    border-radius: 5px;
+    width: 39%;
+    height: 600px;
+}
+.tituloForm{
+    /*acomodar crea tu cuenta, mas arriba*/
+}
