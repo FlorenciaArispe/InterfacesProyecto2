@@ -1,4 +1,16 @@
+*{
+    border: none;
+    padding: 0;
+    margin: 0;
+    list-style:none;
+    text-decoration: none;
+    outline:none;
+}
+
 :root{
+    --tituloPrincipal: "Nunito";
+    --tituloTerciario: "Archivo black";
+    --textBotones: "Roboto";
     --primario: #5C9632;
     --s1_primario: #486831;
     --l1_primario: #70C931;
@@ -15,15 +27,14 @@ header {
     background-color: var(--s1_secundario);
     align-items: center;
     justify-content: space-between;
+    position: fixed;
 }
 
-img{
-padding: 6px;
-}
+
 
 .carousel-container{
     display:flex;
-    overflow-y: auto;
+    overflow-x: scroll;
     width: 390px;
     padding: 5px 5px 10px 5px;
 }
@@ -31,25 +42,37 @@ padding: 6px;
 .carousel{
     background-color: var(--s1_primario);
     width: 400px;
+    padding-top: 45px;
+    font-family:var(--tituloPrincipal);
+    font-size: 16px;
 }
 
 .carouselCategorias{
+   
     background-color: var(--l1_primario);
     width: 400px;
-    height: 100px;
+    height: 105px;
     border-top: 20px solid var(--neutro);
     padding-top: 5px;
-
+    font-family: var(--tituloPrincipal);
+    font-size: 15px;
+    
     
 
 }
 
+
+
 .cardCategoria{
+    display: flex;
+    flex-direction: column;
     width: 90.42px;
     height: 75.54px;
     box-shadow: 5px 5px 10px #828B79;
     background-color: var(--neutro);
-    
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-bottom: 6px;
     border-radius: 5px;
 
 }
@@ -59,7 +82,7 @@ padding: 6px;
     padding: 0px;
     margin: 0px;
     width: 90.42px;
-    height: 57.24px;
+    height: 75%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;  
    
@@ -102,11 +125,11 @@ padding: 6px;
     display: flex;
     flex-direction: row;
     justify-content:space-around;
-   
-    height: 18.3px;
+    align-items: center;
+    height: 25%;
     font-size: 9px;
-       
 }
+
 
 
 
@@ -121,9 +144,6 @@ padding: 6px;
 .imgForm{
     padding: 0px;
     width: 50%;    
-}
-.tituloForm{
-    
 }
 .textoForm{
     display: flex;
@@ -207,4 +227,132 @@ padding: 6px;
 }
 .tituloForm{
     /*acomodar crea tu cuenta, mas arriba*/
+}
+
+.footer2{
+    display: flex;
+    flex-direction: row;
+    
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(to top, var(--s1_secundario) , var(--neutro) );
+    width: 400px ;
+    height: 250px;
+    border-top: 20px solid var(--neutro);
+}
+.footerIcons{
+    width: 200px;
+    justify-content: space-around;
+}
+
+.footerLinks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.hidden{
+    display: none;
+}
+
+.menu-icon {
+    cursor: pointer;
+    fill: #FFFFF2; 
+}
+
+#menu {
+    list-style: none;
+    background-color: #333;
+    padding: 10px;
+    position: fixed;
+    top: 45px; /* Coloca el menú en la parte superior */
+    left: 0; /* Alinea el menú a la izquierda */
+    right: 0; /* Alinea el menú a la derecha */
+    z-index: 1000; 
+    width: 120px;
+}
+
+#menu li {
+    margin: 10px 0;
+}
+
+#menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.contenedor{
+    background-color: var(--neutro);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    transition: all 1.5s;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.loader, .loader:before, .loader:after{
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    animation: loader 1.5s infinite ease-in-out;
+}
+
+.loader{
+    color: var(--secundario);
+    position: relative;
+    animation-delay: -0.16s;
+}
+
+.loader:before, .loader:after{
+    content:'';
+    position: absolute;
+    top:0;
+}
+
+.loader:before{
+    left:-3.5em;
+    animation-delay: -0.32s;
+}
+
+.loader:after{
+    left: 3.5em;
+}
+
+@keyframes loader{
+    0%,
+    80%,
+    100%{
+        box-shadow: 0 2.5em 0 -1.3em;
+    }
+    40%{
+        box-shadow: 0 2.5em 0 0;
+    }
+}
+
+.loader-inner {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    animation: loader 5s infinite ease-in-out;
+    position: relative;
+    animation-delay: -0.16s;
+}
+
+.loader-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+a span:hover{
+    color: var(--secundario);
 }
