@@ -1,3 +1,11 @@
+*{
+    border: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
 :root{
     --primario: #5C9632;
     --s1_primario: #486831;
@@ -16,11 +24,6 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-
-img{
-padding: 6px;
-}
-
 .carousel-container{
     display:flex;
     overflow-y: auto;
@@ -39,19 +42,14 @@ padding: 6px;
     height: 100px;
     border-top: 20px solid var(--neutro);
     padding-top: 5px;
-
-    
-
 }
 
 .cardCategoria{
     width: 90.42px;
     height: 75.54px;
     box-shadow: 5px 5px 10px #828B79;
-    background-color: var(--neutro);
-    
+    background-color: var(--neutro);   
     border-radius: 5px;
-
 }
 
 .img-cardCategoria{
@@ -62,22 +60,18 @@ padding: 6px;
     height: 57.24px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;  
-   
 }
 
-
-.card {
+.card{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    
     align-items: center;
     box-shadow: 5px 5px 10px #828B79;
     border-radius: 10px;
     margin-right: 10px;   
     background-color:var(--neutro) 
 }
-
 
 .img-card{
     border: 0px;
@@ -97,18 +91,13 @@ padding: 6px;
     height: 35px;      
 }
 
-.text-cardCategoria{
-   
+.text-cardCategoria{  
     display: flex;
     flex-direction: row;
     justify-content:space-around;
-   
     height: 18.3px;
-    font-size: 9px;
-       
+    font-size: 9px;       
 }
-
-
 
 .formulario{
     background-color: #363636;
@@ -122,9 +111,7 @@ padding: 6px;
     padding: 0px;
     width: 50%;    
 }
-.tituloForm{
-    
-}
+
 .textoForm{
     display: flex;
     flex-direction: column;
@@ -141,13 +128,25 @@ padding: 6px;
     flex-direction: column;
     width: 90%;
     justify-content: space-between;
+    
+}
+.ojoContraseña svg{
+    position: absolute;
+    right: 5px;
+    margin-top: 2px;
+}
+.ojoContraseña{
+    position: relative;
+    
+}
+.ojoContraseña input{
+    width: 100%;
 }
 .cancel-button{
     position: absolute;
     top: 5px;
     right: 61.5%;
     background: transparent;
-
 }
 .captcha {
     background-color: #f0f0f0;
@@ -172,9 +171,8 @@ padding: 6px;
     margin-left: 10px;
 }
 .lineO{
-    display: flex;
-    flex-direction: row;
-    /*separa espacio*/
+    position: absolute;
+    margin-top: 60px;
 }
 .sesionCon{
     display: flex;
@@ -207,4 +205,188 @@ padding: 6px;
 }
 .tituloForm{
     /*acomodar crea tu cuenta, mas arriba*/
+    
+}
+
+/* Estilos específicos para computadoras */
+@media screen and (min-width: 1024px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        background-color: var(--s1_secundario);
+        align-items: center;
+        justify-content: space-between;
+    }
+    .buscar{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 15px;
+        background-color: var(--neutro);
+        height: 30px;
+        width: 280px;
+
+    }
+    .inputBuscar{
+        margin: 10px;
+        height: 20px;
+        width: 250px;
+    }
+    .logoBuscar{
+        padding-right:3px;
+        margin: 8px;
+        height: 20px;
+    }
+}
+.telekino{
+    margin-top: 3px;
+}
+.xBoton{
+    position: absolute;
+    margin: 7px;
+    left: 98%;
+    background: transparent;
+}
+/*fijarme esto*/
+.fondoJuego{
+    width: 100%;
+    height: 1200px;
+    margin-top: 1px;
+    background-color: var(--s1_secundario);  
+}
+
+.cajaDelJuego{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 7px;
+}
+.cajaDelJuego > div{
+    padding: 3px 0px 0px 10px;
+}
+.posDondeEstoy{
+    display: flex;
+    flex-direction: row;
+}
+.juego{
+    display: flex;
+    justify-content: center;
+}
+.juego img {
+    border-radius: 15px;
+
+}
+/*xq no me anda*/
+.botonPlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+    border: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 150px;
+    /*background-image: linear-gradient(150deg, #5C9632, #ccc, --neutro);*/
+    cursor: pointer;
+    transition: .3s;
+    background-color: #5C9632;
+    position: absolute;
+}
+.botonPlay span{
+    margin-left: 30px;
+}
+.botonPlay:hover {
+    background-color: #363636;
+    
+}
+button:active{
+    transform: scale(0.9);
+}
+.iconsJuego{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-right: 60px;
+    margin: 20px 0px 20px 0px;
+}
+/*pop up*/
+.instruccionJuego{
+    display: flex;
+    background-color: #5C9632;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 300px;
+    width: 20%;
+}
+.instruc{
+    background-color: red;
+    width: 2px;
+    height: 240px;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px #363636;
+}
+.fondoImgJuegos {
+    background-color: #797C76;
+    width: 95%;
+    margin: auto;
+    height: 300px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 0px 10px 10px;
+    flex-direction: column;
+    border-radius: 15px;
+    /*box-shadow: 0 2px 14px rgba(0 ,0, 0, 2);
+    agregar sombra*/
+}
+
+.imgJuegos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.imgJuegos > img{
+    padding: 10px;
+}
+.caractJuegoyPublic{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.caracteristicasJuego{
+    background-color: #797C76;
+    width: 1320px;
+    height: 604px; 
+    margin: 12px 12px 12px 0px;
+    border-radius: 15px;
+    padding: 12px;
+}
+.caractJuego{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    font-size: 30px;
+    padding: 10px 0px 0px 0px;
+}
+.caractJuego p{
+    padding: 20px;
+}
+.caractJuego h3 {
+    padding: 20px;
+}
+.imgPublic{
+    margin-top: 16px;
+}
+.explicacionJuego{
+    font-size: 30px;
+}
+.explicacionJuego h2{
+    padding: 10px;
 }
