@@ -1,10 +1,18 @@
+
 const cards= [
+    {
+        id: 1,
+        nameJuego: "Padrinos en linea",
+        precio: "",
+        img: "images/caratulaPadrinos.png",
+        carrito: '' 
+    },
     {
         id: 1,
         nameJuego: "Minecraft",
         precio: "1000$",
         img: "images/minecraft.png",
-        carrito: ' <svg width="20" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"> <circle stroke="#797C76" stroke-linecap="round" stroke-width="1.5" cx="10" cy="28" r="2"/> <circle stroke="#797C76" stroke-linecap="round" stroke-width="1.5" cx="24" cy="28" r="2"/> <path stroke="#797C76" stroke-linecap="round" stroke-width="1.5" d="m28 7h-22.18l-.82-4.2a1 1 0 0 0 -1-.8h-4v2h3.18l3.82 19.2a1 1 0 0 0 1 .8h18v-2h-17.18l-.82-4h18a1 1 0 0 0 1-.78l2-9a1 1 0 0 0 -1-1.22zm-2.8 9h-17.58l-1.4-7h20.53z"/> <path d="m0 0h32v32h-32z" fill="none"/> </svg>' 
+        carrito: ' <svg id="icono" class="icono-carrito" width="20" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"> <circle stroke="#797C76" stroke-linecap="round" stroke-width="1.5" cx="10" cy="28" r="2"/> <circle stroke="#797C76" stroke-linecap="round" stroke-width="1.5" cx="24" cy="28" r="2"/> <path stroke="#797C76" stroke-linecap="round" stroke-width="1.5" d="m28 7h-22.18l-.82-4.2a1 1 0 0 0 -1-.8h-4v2h3.18l3.82 19.2a1 1 0 0 0 1 .8h18v-2h-17.18l-.82-4h18a1 1 0 0 0 1-.78l2-9a1 1 0 0 0 -1-1.22zm-2.8 9h-17.58l-1.4-7h20.53z"/> <path d="m0 0h32v32h-32z" fill="none"/> </svg>' 
     },
     {
         id: 2,
@@ -364,9 +372,12 @@ let carreras= document.getElementById("categoriaCarreras");
 let colorear= document.getElementById("categoriaColorear");
 let puzzle= document.getElementById("categoriaPuzzle");
 
+let numerosMobile= document.getElementById("numerosMobile");
+let carrerasMobile=document.getElementById("carrerasMobile");
+
 cards.map((x) =>{
     card.innerHTML += `
-    <div class="card">
+    <div class="card animacionScroll">
     <img class="img-card" src="${x.img}" alt="${x.nameJuego}">
     <div class="text-card">
         <div>
@@ -375,7 +386,7 @@ cards.map((x) =>{
         </div>                
         <div>
             <button id="btn-carrito">
-                ${x.carrito} 
+                    ${x.carrito}  
             </button>
             
             <svg width="20" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -414,6 +425,49 @@ categoriaNumeros.map((i)=>{
     <div class="cardCategoria">
     <img class="img-cardCategoria" src="${i.img}" alt="${i.nameJuego}">
     <div class="text-cardCategoria">
+        <div>
+            <p>${i.nameJuego}</p> 
+            <p>${i.precio}</p>
+        </div>                
+        <div>
+        ${i.carrito} 
+            <svg width="15" height="13" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="#797C76" d="M453.122,79.012a128,128,0,0,0-181.087.068l-15.511,15.7L241.142,79.114l-.1-.1a128,128,0,0,0-181.02,0l-6.91,6.91a128,128,0,0,0,0,181.019L235.485,449.314l20.595,21.578.491-.492.533.533L276.4,450.574,460.032,266.94a128.147,128.147,0,0,0,0-181.019ZM437.4,244.313,256.571,425.146,75.738,244.313a96,96,0,0,1,0-135.764l6.911-6.91a96,96,0,0,1,135.713-.051l38.093,38.787,38.274-38.736a96,96,0,0,1,135.765,0l6.91,6.909A96.11,96.11,0,0,1,437.4,244.313Z" class="ci-primary"/>
+            </svg>
+        </div>    
+    </div>
+</div>  
+    `
+})
+
+categoriaCarreras.map((i)=> {
+    carrerasMobile.innerHTML +=`
+    <div class="cardMobile">
+    <img class="img-cardMobile" src="${i.img}" alt="${i.nameJuego}">
+    <div class="text-cardMobile">
+        <div>
+            <p>${i.nameJuego}</p> 
+            <p>${i.precio}</p>
+        </div>                
+        <div>
+        <button>
+            ${i.carrito} 
+        </button >
+            <svg width="15" height="13" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="#797C76" d="M453.122,79.012a128,128,0,0,0-181.087.068l-15.511,15.7L241.142,79.114l-.1-.1a128,128,0,0,0-181.02,0l-6.91,6.91a128,128,0,0,0,0,181.019L235.485,449.314l20.595,21.578.491-.492.533.533L276.4,450.574,460.032,266.94a128.147,128.147,0,0,0,0-181.019ZM437.4,244.313,256.571,425.146,75.738,244.313a96,96,0,0,1,0-135.764l6.911-6.91a96,96,0,0,1,135.713-.051l38.093,38.787,38.274-38.736a96,96,0,0,1,135.765,0l6.91,6.909A96.11,96.11,0,0,1,437.4,244.313Z" class="ci-primary"/>
+            </svg>
+        </div>    
+    </div>
+</div>   
+    `
+});
+
+//MOBILE
+categoriaNumeros.map((i)=>{
+    numerosMobile.innerHTML +=`
+    <div class="cardMobile">
+    <img class="img-cardMobile" src="${i.img}" alt="${i.nameJuego}">
+    <div class="text-cardMobile">
         <div>
             <p>${i.nameJuego}</p> 
             <p>${i.precio}</p>
@@ -502,6 +556,9 @@ categoriaPuzzle.map((i)=> {
 const menuIcon = document.querySelector(".menu-icon");
 const menu = document.getElementById("menu");
 
+const userIcon = document.querySelector(".userIcon");
+const user = document.getElementById("user");
+
 // Agregar un evento al icono (SVG) para mostrar u ocultar el menú
 menuIcon.addEventListener("click", () => {
     if (menu.classList.contains("hidden")) {
@@ -512,15 +569,33 @@ menuIcon.addEventListener("click", () => {
         menu.classList.add("hidden");
     }
 });
- /*
- ARREGLAR BOTON AL CARRITO. YA PUSE ID EN CARRITO.
-let boton = document.getElementById("btn-carrito");
 
-boton.addEventListener("click", function() {
-    icono.style.color = "green"; // Cambia el color del icono
+userIcon.addEventListener("click", () => {
+    if (user.classList.contains("hidden2")) {
+        // Mostrar el menú
+        user.classList.remove("hidden2");
+    } else {
+        // Ocultar el menú
+        user.classList.add("hidden2");
+    }
 });
-*/
 
+//CARRITO
+const iconoElement = document.getElementById("icono");
+
+// Definir el nuevo código SVG que deseas mostrar cuando se haga clic
+const nuevoSVG = `
+<svg height="35" viewBox="0 0 512 512" width="35" xmlns="http://www.w3.org/2000/svg"><circle cx="176" cy="416" r="32"/><circle cx="400" cy="416" r="32"/><path d="m456.8 120.78a23.92 23.92 0 0 0 -18.56-8.78h-304.35l-6.13-34.78a16 16 0 0 0 -15.76-13.22h-64a16 16 0 0 0 0 32h50.58l45.66 258.78a16 16 0 0 0 15.76 13.22h256a16 16 0 0 0 0-32h-242.58l-5.64-32h241.66a24.07 24.07 0 0 0 23.56-19.29l28.8-144a24 24 0 0 0 -5-19.93z"/></svg>`;
+
+// Agregar un manejador de eventos al hacer clic en el icono
+iconoElement.addEventListener("click", () => {
+  // Reemplazar el contenido del icono con el nuevo SVG
+  iconoElement.innerHTML = nuevoSVG;
+
+});
+
+/*
+LOADER
 window.addEventListener('load', () => {
     const contenedor = document.querySelector('.contenedor');
     const loaderInner = document.querySelector('.loader-inner');
@@ -544,8 +619,7 @@ window.addEventListener('load', () => {
 
     const animacion = setInterval(actualizarPorcentaje, intervalo);
 });
-
-
+*/
 
 
 

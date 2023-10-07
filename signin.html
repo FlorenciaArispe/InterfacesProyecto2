@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Registrate</title>
 </head>
-<body>
+<body class="fondo">
     <div class="formulario formSignin">
         <img class="imgForm" src="images/imgRegistro.jpg" alt="imgRegistro">
         <button class="cancel-button" type="button">
@@ -20,23 +20,23 @@
                 <h2>¡ES GRATIS!</h2>
             </div>
             <div class="campoCompletar">
-                <label for= "nombreyapellido">Nombre y Apellido *</label>
+                <label>Nombre y Apellido *</label>
                 <input type="text" name="nombreyapellido" required>        
             </div>
             <div class="campoCompletar">
-                <label for= "nickName">NickName</label>
+                <label>NickName</label>
                 <input type="text" name="nickName">        
             </div>
             <div class="campoCompletar">
-                <label for= "edad">Edad *</label>
+                <label>Edad *</label>
                 <input type="text" name="edad" required>        
             </div>
             <div class="campoCompletar">
-                <label for= "email">Email</label>
+                <label>Email</label>
                 <input type="text" name="email" required>        
             </div>
             <div class="campoCompletar">
-                <label for= "contraseña">Contraseña</label>
+                <label>Contraseña</label>
                 <div class="ojoContraseña">
                     <input type="password" name="contraseña" required>    
                     <svg width="16" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="campoCompletar">
-                <label for= "repetirContraseña">Repetir contraseña *</label>
+                <label>Repetir contraseña *</label>
                 <div class="ojoContraseña">
                     <input type="text" name="repetirContraseña" required>      
                     <svg width="16" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -76,16 +76,42 @@
                 REGISTRARSE CON GOOGLE
             </button>
             <button class="sesionCon">
-                <img src="images/facebook.png" alt="facebook" width="10" height="15">
+                <!--<img src="images/facebook.png" alt="facebook" width="10" height="15">-->
+                
                 <p>REGISTRARSE CON FACEBOOK</p>
-            </button>  
-            <button class="acceder" type="submit" value="acceder">Acceder</button>  
+            </button> 
+            
+            <div class="center">
+                <button id="open-popup-btn" class="acceder" value="acceder">Registrar</button>  
+            </div>
+           
             <div class="linkRegistro">
                 <p>¿Ya tenes cuenta?</p>
                 <a href="login.html">Ingresa ahora</a>
             </div>
+          
+            
             
         </form>
     </div>
+     <!--ANIMACION POPUP PARA OK REGISTRO-->
+     <div class="popup">
+        <div class="icon">
+            <i class="fa fa-check"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" fill="#4bd37b" r="30"/><path d="m46 14-21 21.6-7-7.2-7 7.2 14 14.4 28-28.8z" fill="#fff"/></svg></i>
+        </div>
+        <div class="title">
+            Bienvenido!
+        </div>
+        <div class="descripcion">
+            <p>Ya tienes tu cuenta de JumpUp. Podras disfrutar de los mejores juegos seleccionados especialmente para vos</p>
+            <p>Toca en Siguiente para iniciar sesion</p>
+        </div>
+        <div class="dismiss-btn">
+            <button id="dismiss-pop">
+              SIGUIENTE
+            </button>
+        </div>
+    </div>
+    <script src="js/scriptLogin.js"></script>
 </body>
 </html>
