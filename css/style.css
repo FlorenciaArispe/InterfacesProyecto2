@@ -118,15 +118,22 @@ CAROUSEL Y CARDS MOBILE
 }
 
 .carousel-container2{
-
     display:flex;
     overflow-x: scroll;
     padding-bottom: 12px;
     height: 150px;
-
-  
 }
 
+.carouselJuegosRelacionados{
+    display:flex;
+    padding-bottom: 12px;
+    height: 150px;
+    padding-top: 10px;
+}
+
+#icono {
+    transition: transform 0.3s ease-in-out;
+  }
 .card {
     display: flex;
     flex-direction: column;
@@ -377,17 +384,25 @@ form input{
     justify-content: space-between;
 }
 
-.ojoContraseña svg{
-    position: absolute;
-    right: 5px;
-    margin-top: 2px;
-}
 .ojoContraseña{
     position: relative;
-    
+    cursor:pointer;
+    display: inline-block;
+    cursor: pointer;
+}
+.ojoCerrado, .ojoAbierto, .ojoCerradoRepet, .ojoAbiertoRepet{
+    position: absolute;
+    top: 0.9px;
+    right: 5px;
 }
 .ojoContraseña input{
     width: 100%;
+}
+.ojoCerrado, .ojoCerradoRepet{
+    display: block;
+}
+.ojoAbierto, .ojoAbiertoRepet{
+    display: none;
 }
 
 .cancel-button{
@@ -395,6 +410,7 @@ form input{
     top: 5px;
     left: 96%;
     background: transparent;
+    cursor: pointer;
 
 }
 .captcha {
@@ -423,6 +439,7 @@ form input{
     position: absolute;
     margin-top: 60px;
 }
+
 .sesionCon{
     display: flex;
     align-items: center;
@@ -430,12 +447,29 @@ form input{
     width: 78%;
     border-radius: 15px;
     font-size: 10px;
+    height: 19px;
+    cursor: pointer;
+}
+.sesionCon >svg{
+    padding-right: 2%;
+}
+.face{
+    background-color: #3B5998;
+    color: var(--neutro);
+    border: 1px solid var(--l2_secundario);
+    cursor: pointer;
+}
+.google{
+    background-color: var(--neutro);
+    color: var(--s2_secundario);
+    border: 1px solid var(--s1_secundario);
+    cursor: pointer;
 }
 .acceder{
     padding: 9px;
     width: 110%;
     border-radius: 15px;
-    margin-top: 25px;
+    margin-top: 20px;
     background-color: var(--l2_secundario); 
     cursor: pointer;   
 }
@@ -443,6 +477,12 @@ form input{
 .acceder a {
     color: inherit;
     width: 100px;
+}
+
+.juegosSimilares{
+    display: flex;
+    flex-direction:row ;
+
 }
 
 .linkRegistro{
@@ -463,7 +503,7 @@ form input{
 
 }
 .tituloForm{
-    /*acomodar crea tu cuenta, mas arriba*/
+    text-align: center;
 }
 
 .popup{
@@ -715,6 +755,7 @@ form input{
     top: 9%;
     left: 98.5%;
     background: transparent;
+    cursor: pointer;
 }
 .fondoJuego{
     width: 100%;
@@ -725,6 +766,7 @@ form input{
 .posDondeEstoy{
     display: flex;
     flex-direction: row;
+    padding-left: 10px;
 }
 .posDondeEstoy h3{
     padding-right: 0.5%;
@@ -806,7 +848,7 @@ button:active{
     position: absolute;
     pointer-events: none;
     z-index: 9998;
-    top: 95%;
+    top: 90%;
     right: 10%;
     border-radius: 15px;
     
@@ -814,12 +856,14 @@ button:active{
 .textControls{
     margin: 15%;
     font-family: var(--tituloPrincipal);
+    color: var(--neutro);
 }
 .botonControls{
     position: absolute;
     top:1%;
     right: 1%;
     background: transparent;
+    cursor: pointer;
 }
 .botonInstruc{
     cursor: pointer;
@@ -841,6 +885,10 @@ button:active{
     transition: fill 0.4s ease; /* Transición suave para el cambio de color de relleno */
     transition: stroke 0.1s ease; /* Transición suave para el cambio de color del borde */
 }
+
+.lineComen{
+
+}
 .mg, .noMg, .extend{
     cursor: pointer;
 }
@@ -851,15 +899,19 @@ button:active{
     height: 22%;
     margin-top: 5.7%;
     display: flex;
-    align-items: flex-start;
+   
     justify-content: center;
     padding: 2% 0% 1% 1%;
     flex-direction: column;
     border-radius: 15px;
     position: relative;
     overflow: hidden;
-    font-family: var(--tituloPrincipal);
     box-shadow: 10px 10px 5px rgba(26, 25, 25, 0.5);
+}
+
+.fondoImgJuegos h3{
+    color: var(--l1_secundario);
+    font-family: var(--tituloPrincipal);
 }
 
 .imgJuegos{
@@ -871,7 +923,7 @@ button:active{
     
 }
 .imgJuegos > img{
-    padding: 8px;
+    padding: 18px;
     
 }
 .caractJuegoyPublic{
@@ -980,9 +1032,11 @@ button:active{
     top:1%;
     right: 1%;
     background: transparent;
+    cursor: pointer;
 }
 .compartirTodo{
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 3px var(--s1_secundario);
+    border-radius: 15px;
     height: 290px;
     width: 30%;
     opacity: 0;
@@ -1172,6 +1226,10 @@ input{
         padding-right:3px;
         margin: 8px;
         height: 22px;
+    }
+
+    .card a .img-card{
+        height: 80%;
     }
 
     #user{
