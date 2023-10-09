@@ -10,7 +10,7 @@ HACER VARIABLES DE TODOS LOS COLORES
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 body{
-    background-image: url("/images/fondoLogin.png"); /* Ruta a tu imagen de fondo */
+    background-image: url("/images/4lineados.jpg"); /* Ruta a tu imagen de fondo */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
