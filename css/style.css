@@ -159,7 +159,7 @@ CAROUSEL Y CARDS MOBILE
     height: 110px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
     opacity: 1;
 }
 
@@ -331,7 +331,7 @@ CAROUSEL Y CARDS MOBILE
     border-radius: 15px;
     position: relative;
     left: 30%;
-    margin-top: 3%;
+    margin-top: 2%;
     background-color: var(--neutro);
 }
 
@@ -650,7 +650,7 @@ form input{
     background-color: var(--s3_secundario);
     padding: 10px;
     position: absolute;
-    top: 50px;
+    top: 45px;
     left: 0;
     right: 0;
     z-index: 1000; 
@@ -876,7 +876,7 @@ button:active{
     cursor: pointer;
     transition: background-color 0.3s ease;
     stroke: white;
-    transition: fill 0.4s ease; /* Transición suave para el cambio de color de relleno */
+    transition: fill 1s ease; /* Transición suave para el cambio de color de relleno */
     transition: stroke 0.1s ease; /* Transición suave para el cambio de color del borde */
 }
 
