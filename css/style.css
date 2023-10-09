@@ -9,6 +9,13 @@ HACER VARIABLES DE TODOS LOS COLORES
 @import url('https://fonts.googleapis.com/css?family=Archivo Black');
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
+.fondo{
+    background-image: url('../images/fondoLogin.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+}
+
 *{
     border: none;
     padding: 0;
