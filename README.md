@@ -1,5 +1,6 @@
-Entregable 2 de Interfaces de Usuario e Interaccion
-- Navegador: chrome 
-- Aplicar animaciones en caso de registro correcto: en la pagina de index.html si se aprieta el btn RESGISTRAR se ve un popup animado que indica el registro correcto.
-- Deben incluir animaciones Hover en botones: btn VER MAS de carouseles por categoria, btn PLAY en pagina de juego, btn LIKE en pagina de juego (corazon), btn COMPARTIR en pagina de juego.
-- Contener al menos una galería/carrusel de imágenes animada: carousel de recomendados en MobileFirst responsive.
+*Entregable 2:* Este práctico contempla utilizar HTML5, JavaScript y CSS3 (animaciones simples) para continuar el trabajo anterior e Implementarlo. 
+- El usuario debe poder interactuar con las 3 páginas descritas en el práctico anterior
+- Deben incluir animaciones Hover en botones.
+- Al cargar la Home se debe ejecutar siempre un loading simulado de 5 segundos, el cual NO puede ser un GIF. El mismo debe mostrar un % de avance y una animación de carga
+- Contener al menos una galería/carrusel de imágenes animada.
+- Diseño Mobile First: Se debe implementar el Home del sitio para las versiones mobile y desktop
