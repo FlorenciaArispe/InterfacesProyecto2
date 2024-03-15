@@ -1,3 +1,5 @@
+GitPages: https://florenciaarispe.github.io/InterfacesProyecto2/
+
 *Entregable 2:* Este práctico contempla utilizar HTML5, JavaScript y CSS3 (animaciones simples) para continuar el trabajo anterior e Implementarlo. 
 - El usuario debe poder interactuar con las 3 páginas descritas en el práctico anterior
 - Deben incluir animaciones Hover en botones.
